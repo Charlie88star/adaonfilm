@@ -1,119 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ada on Film</title>
-    <style>
-        body {
-            background-color: #fcdde1;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        h1 {
-            font-style: italic;
-        }
-        img {
-            max-width: 90%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ada on Film</title>
+  <style>
+    :root {
+      --bg: #f8dfe6; /* pastel pink */
+      --text: #222;
+    }
+    html, body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    header {
+      text-align: center;
+      padding: 24px 16px 8px;
+    }
+    header h1 {
+      margin: 0 0 8px 0;
+      font-size: 28px;
+      font-style: italic;
+      font-weight: 600;
+    }
+    header p { margin: 0 0 12px 0; }
+    .btns { display:inline-flex; gap:10px; }
+    button {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #bbb;
+      background: #fff;
+      cursor: pointer;
+    }
+    main { width: 100%; }
+    .img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0;              /* full bleed */
+      object-fit: contain;
+      background: #eee;       /* placeholder while loading */
+    }
+    .sr { position:absolute; left:-9999px; }
+  </style>
 </head>
 <body>
+  <header>
     <h1>Ada on Film</h1>
     <p>Ada caught on film. Shot on a Canon A1 with Kodak Gold.</p>
-
-    <button onclick="playAudio()">▶ Play Music</button>
-    <button onclick="pauseAudio()">❚❚ Pause Music</button>
-
-    <audio id="backgroundMusic" loop>
-        <source src="your-music-file.mp3" type="audio/mpeg">
-    </audio>
-
-    <script>
-        var audio = document.getElementById("backgroundMusic");
-        function playAudio() { audio.play(); }
-        function pauseAudio() { audio.pause(); }
-    </script>
-
-    <div>
-        <!-- Custom order first -->
-        <img src="24-211200010016.jpg" alt="Ada film shot">
-        <img src="74-026823010030.jpg" alt="Ada film shot">
-        <img src="70-026823010020.jpg" alt="Ada film shot">
-        <img src="4-211800010011.jpg" alt="Ada film shot">
-        <img src="73-026823010012.jpg" alt="Ada film shot">
-        <img src="3-211800010015.jpg" alt="Ada film shot">
-        <img src="53-027945010019.jpg" alt="Ada film shot">
-        <img src="7-211800010019.jpg" alt="Ada film shot">
-        <img src="16-210773010017.jpg" alt="Ada film shot">
-        <img src="19-210773010037.jpg" alt="Ada film shot">
-        <img src="23-211200010014.jpg" alt="Ada film shot">
-
-        <!-- Randomized rest -->
-        <img src="6-211800010020.jpg" alt="Ada film shot">
-        <img src="8-027945010034.jpg" alt="Ada film shot">
-        <img src="9-029035010003.jpg" alt="Ada film shot">
-        <img src="10-029035010001.jpg" alt="Ada film shot">
-        <img src="11-029035010013.jpg" alt="Ada film shot">
-        <img src="12-029035010016.jpg" alt="Ada film shot">
-        <img src="13-029035010028.jpg" alt="Ada film shot">
-        <img src="14-210773010011.jpg" alt="Ada film shot">
-        <img src="15-210773010015.jpg" alt="Ada film shot">
-        <img src="17-210773010027.jpg" alt="Ada film shot">
-        <img src="18-210773010038.jpg" alt="Ada film shot">
-        <img src="20-211200010005.jpg" alt="Ada film shot">
-        <img src="21-211200010006.jpg" alt="Ada film shot">
-        <img src="22-211200010009.jpg" alt="Ada film shot">
-        <img src="25-211200010017.jpg" alt="Ada film shot">
-        <img src="26-211200010019.jpg" alt="Ada film shot">
-        <img src="27-211200010018.jpg" alt="Ada film shot">
-        <img src="28-211200010020.jpg" alt="Ada film shot">
-        <img src="29-211200010023.jpg" alt="Ada film shot">
-        <img src="30-211200010021.jpg" alt="Ada film shot">
-        <img src="31-211200010030.jpg" alt="Ada film shot">
-        <img src="32-211200010032.jpg" alt="Ada film shot">
-        <img src="33-211200010033.jpg" alt="Ada film shot">
-        <img src="34-211200010035.jpg" alt="Ada film shot">
-        <img src="35-211485010002.jpg" alt="Ada film shot">
-        <img src="36-211485010003.jpg" alt="Ada film shot">
-        <img src="37-211485010006.jpg" alt="Ada film shot">
-        <img src="38-211485010005.jpg" alt="Ada film shot">
-        <img src="39-211485010011.jpg" alt="Ada film shot">
-        <img src="40-211485010012.jpg" alt="Ada film shot">
-        <img src="41-211485010013.jpg" alt="Ada film shot">
-        <img src="42-211485010019.jpg" alt="Ada film shot">
-        <img src="43-211485010023.jpg" alt="Ada film shot">
-        <img src="44-027945010011.jpg" alt="Ada film shot">
-        <img src="45-211485010024.jpg" alt="Ada film shot">
-        <img src="46-211485010025.jpg" alt="Ada film shot">
-        <img src="47-027945010023.jpg" alt="Ada film shot">
-        <img src="48-211485010029.jpg" alt="Ada film shot">
-        <img src="49-211485010034.jpg" alt="Ada film shot">
-        <img src="50-027945010027.jpg" alt="Ada film shot">
-        <img src="51-027945010015.jpg" alt="Ada film shot">
-        <img src="52-027945010009.jpg" alt="Ada film shot">
-        <img src="54-027945010029.jpg" alt="Ada film shot">
-        <img src="55-027945010003.jpg" alt="Ada film shot">
-        <img src="56-024410010032.jpg" alt="Ada film shot">
-        <img src="57-024410010024.jpg" alt="Ada film shot">
-        <img src="58-024410010026.jpg" alt="Ada film shot">
-        <img src="59-024410010010.jpg" alt="Ada film shot">
-        <img src="60-024410010005.jpg" alt="Ada film shot">
-        <img src="61-024410010001.jpg" alt="Ada film shot">
-        <img src="62-022973010022.jpg" alt="Ada film shot">
-        <img src="63-022973010021.jpg" alt="Ada film shot">
-        <img src="64-022973010009.jpg" alt="Ada film shot">
-        <img src="65-022973010017.jpg" alt="Ada film shot">
-        <img src="66-022973010005.jpg" alt="Ada film shot">
-        <img src="67-026823010035.jpg" alt="Ada film shot">
-        <img src="68-026823010032.jpg" alt="Ada film shot">
-        <img src="69-026823010027.jpg" alt="Ada film shot">
-        <img src="71-026823010016.jpg" alt="Ada film shot">
-        <img src="72-026823010017.jpg" alt="Ada film shot">
-        <img src="1-211800010008.jpg" alt="Ada film shot">
-        <img src="2-211800010004.jpg" alt="Ada film shot">
+    <div class="btns">
+      <button id="play">▶ Play Music</button>
+      <button id="pause">❚❚ Pause Music</button>
     </div>
+    <audio id="bgm" preload="auto" loop>
+      <source src="Kacey Musgraves - Slow Burn Music Video.mp3" type="audio/mpeg" />
+      <span class="sr">Your browser doesn’t support audio.</span>
+    </audio>
+  </header>
+
+  <main id="gallery" aria-live="polite"></main>
+
+  <script>
+    // --- YOUR FILENAMES (without extension) ---
+    const all = [
+      "6-211800010020","7-211800010019","8-027945010034","9-029035010003","10-029035010001",
+      "11-029035010013","12-029035010016","13-029035010028","14-210773010011","15-210773010015",
+      "16-210773010017","17-210773010027","18-210773010038","19-210773010037","20-211200010005",
+      "21-211200010006","22-211200010009","23-211200010014","24-211200010016","25-211200010017",
+      "26-211200010019","27-211200010018","28-211200010020","29-211200010023","30-211200010021",
+      "31-211200010030","32-211200010032","33-211200010033","34-211200010035","35-211485010002",
+      "36-211485010003","37-211485010006","38-211485010005","39-211485010011","40-211485010012",
+      "41-211485010013","42-211485010019","43-211485010023","44-027945010011","45-211485010024",
+      "46-211485010025","47-027945010023","48-211485010029","49-211485010034","50-027945010027",
+      "51-027945010015","52-027945010009","53-027945010019","54-027945010029","55-027945010003",
+      "56-024410010032","57-024410010024","58-024410010026","59-024410010010","60-024410010005",
+      "61-024410010001","62-022973010022","63-022973010021","64-022973010009","65-022973010017",
+      "66-022973010005","67-026823010035","68-026823010032","69-026823010027","70-026823010018",
+      "71-026823010016","72-026823010017","73-026823010012","74-026823010011","3-211800010015",
+      "2-211800010004","1-211800010008","4-211800010011","5-211800010009"
+    ];
+
+    // Your “must be first in this order” sequence:
+    const first = [
+      "24-211200010016", // (TOP)
+      "74-026823010011",
+      "70-026823010018",
+      "4-211800010011",
+      "73-026823010012",
+      "3-211800010015",
+      "53-027945010019",
+      "7-211800010019",
+      "16-210773010017",
+      "19-210773010037",
+      "23-211200010014",
+    ];
+
+    // Build the remainder list and shuffle
+    const firstSet = new Set(first);
+    const rest = all.filter(n => !firstSet.has(n));
+    // Simple shuffle
+    for (let i = rest.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [rest[i], rest[j]] = [rest[j], rest[i]];
+    }
+
+    // Combined ordered list
+    const ordered = [...first, ...rest];
+
+    // Helper: create <img> that retries extension variants
+    function createSmartImg(base) {
+      const el = document.createElement('img');
+      el.className = 'img';
+      el.alt = 'Ada film shot';
+      const exts = ['.jpg', '.JPG', '.jpeg', '.JPEG'];
+      let i = 0;
+
+      function tryNext() {
+        if (i >= exts.length) return;         // give up (will show broken icon)
+        el.src = base + exts[i++];
+      }
+      el.addEventListener('error', tryNext, { once: false });
+      tryNext(); // start with .jpg
+      return el;
+    }
+
+    // Render images
+    const gallery = document.getElementById('gallery');
+    ordered.forEach(name => gallery.appendChild(createSmartImg(name)));
+
+    // Music controls (mobile requires user gesture)
+    const audio = document.getElementById('bgm');
+    document.getElementById('play').addEventListener('click', () => audio.play());
+    document.getElementById('pause').addEventListener('click', () => audio.pause());
+  </script>
 </body>
 </html>
