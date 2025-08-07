@@ -1,120 +1,167 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ada on Film</title>
   <style>
-    body {
-      background-color: #fddde6;
-      font-family: Arial, sans-serif;
+    :root {
+      --bg: #f6dbe1;      /* pastel pink */
+      --text: #222;
+      --muted: #666;
+      --btn-bg: #fff;
+      --btn-br: #ccc;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    header {
       text-align: center;
+      padding: 28px 16px 12px;
     }
     h1 {
-      font-style: italic;
-      font-weight: normal;
+      margin: 0 0 6px;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 700;
     }
-    img {
-      width: 100%;
-      max-width: 600px;
-      margin: 20px auto;
-      display: block;
-    }
-    button {
-      margin: 10px;
-      padding: 10px 20px;
+    .sub {
+      margin: 0 0 16px;
       font-size: 14px;
+      color: var(--muted);
+    }
+    .controls {
+      display: inline-flex;
+      gap: 10px;
+    }
+    .controls button {
+      appearance: none;
+      border: 1px solid var(--btn-br);
+      background: var(--btn-bg);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .gal img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      background: #eee;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      padding: 28px 0 40px;
     }
   </style>
 </head>
 <body>
-  <h1>Ada on Film</h1>
-  <p>Ada caught on film. Shot on a Canon A1 with Kodak Gold.</p>
-  <audio id="background-music" loop>
-    <source src="music.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-  <button onclick="document.getElementById('background-music').play()">▶ Play Music</button>
-  <button onclick="document.getElementById('background-music').pause()">❚❚ Pause Music</button>
-  <img src="jord/24-211200010016.jpg" alt="Ada film shot">
-  <img src="jord/23-026823010030.jpg" alt="Ada film shot">
-  <img src="jord/2-026823010020.jpg" alt="Ada film shot">
-  <img src="jord/4-211800010011.jpg" alt="Ada film shot">
-  <img src="jord/28-026823010012.jpg" alt="Ada film shot">
-  <img src="jord/3-211800010015.jpg" alt="Ada film shot">
-  <img src="jord/53-027945010019.jpg" alt="Ada film shot">
-  <img src="jord/7-211800010019.jpg" alt="Ada film shot">
-  <img src="jord/61-210773010017.jpg" alt="Ada film shot">
-  <img src="jord/60-210773010037.jpg" alt="Ada film shot">
-  <img src="jord/40-211200010014.jpg" alt="Ada film shot">
-  <img src="jord/8-027945010034.jpg" alt="Ada film shot">
-  <img src="jord/36-211485010003.jpg" alt="Ada film shot">
-  <img src="jord/60-024410010005.jpg" alt="Ada film shot">
-  <img src="jord/48-211485010029.jpg" alt="Ada film shot">
-  <img src="jord/12-029035010016.jpg" alt="Ada film shot">
-  <img src="jord/42-211485010019.jpg" alt="Ada film shot">
-  <img src="jord/72-026823010017.jpg" alt="Ada film shot">
-  <img src="jord/67-026823010035.jpg" alt="Ada film shot">
-  <img src="jord/70-026823010018.jpg" alt="Ada film shot">
-  <img src="jord/18-210773010038.jpg" alt="Ada film shot">
-  <img src="jord/26-211200010019.jpg" alt="Ada film shot">
-  <img src="jord/73-026823010012.jpg" alt="Ada film shot">
-  <img src="jord/17-210773010027.jpg" alt="Ada film shot">
-  <img src="jord/55-027945010003.jpg" alt="Ada film shot">
-  <img src="jord/51-027945010015.jpg" alt="Ada film shot">
-  <img src="jord/16-210773010017.jpg" alt="Ada film shot">
-  <img src="jord/33-211200010033.jpg" alt="Ada film shot">
-  <img src="jord/35-211485010002.jpg" alt="Ada film shot">
-  <img src="jord/64-022973010009.jpg" alt="Ada film shot">
-  <img src="jord/50-027945010027.jpg" alt="Ada film shot">
-  <img src="jord/22-211200010009.jpg" alt="Ada film shot">
-  <img src="jord/9-029035010003.jpg" alt="Ada film shot">
-  <img src="jord/14-210773010011.jpg" alt="Ada film shot">
-  <img src="jord/63-022973010021.jpg" alt="Ada film shot">
-  <img src="jord/30-211200010021.jpg" alt="Ada film shot">
-  <img src="jord/47-027945010023.jpg" alt="Ada film shot">
-  <img src="jord/41-211485010013.jpg" alt="Ada film shot">
-  <img src="jord/27-211200010018.jpg" alt="Ada film shot">
-  <img src="jord/13-029035010028.jpg" alt="Ada film shot">
-  <img src="jord/1-211800010008.jpg" alt="Ada film shot">
-  <img src="jord/11-029035010013.jpg" alt="Ada film shot">
-  <img src="jord/34-211200010035.jpg" alt="Ada film shot">
-  <img src="jord/23-211200010014.jpg" alt="Ada film shot">
-  <img src="jord/71-026823010016.jpg" alt="Ada film shot">
-  <img src="jord/19-210773010037.jpg" alt="Ada film shot">
-  <img src="jord/20-211200010005.jpg" alt="Ada film shot">
-  <img src="jord/58-024410010026.jpg" alt="Ada film shot">
-  <img src="jord/62-022973010022.jpg" alt="Ada film shot">
-  <img src="jord/69-026823010027.jpg" alt="Ada film shot">
-  <img src="jord/74-026823010011.jpg" alt="Ada film shot">
-  <img src="jord/43-211485010023.jpg" alt="Ada film shot">
-  <img src="jord/2-211800010004.jpg" alt="Ada film shot">
-  <img src="jord/49-211485010034.jpg" alt="Ada film shot">
-  <img src="jord/37-211485010006.jpg" alt="Ada film shot">
-  <img src="jord/45-211485010024.jpg" alt="Ada film shot">
-  <img src="jord/5-211800010009.jpg" alt="Ada film shot">
-  <img src="jord/57-024410010024.jpg" alt="Ada film shot">
-  <img src="jord/68-026823010032.jpg" alt="Ada film shot">
-  <img src="jord/25-211200010017.jpg" alt="Ada film shot">
-  <img src="jord/65-022973010017.jpg" alt="Ada film shot">
-  <img src="jord/31-211200010030.jpg" alt="Ada film shot">
-  <img src="jord/59-024410010010.jpg" alt="Ada film shot">
-  <img src="jord/52-027945010009.jpg" alt="Ada film shot">
-  <img src="jord/39-211485010011.jpg" alt="Ada film shot">
-  <img src="jord/61-024410010001.jpg" alt="Ada film shot">
-  <img src="jord/32-211200010032.jpg" alt="Ada film shot">
-  <img src="jord/28-211200010020.jpg" alt="Ada film shot">
-  <img src="jord/29-211200010023.jpg" alt="Ada film shot">
-  <img src="jord/15-210773010015.jpg" alt="Ada film shot">
-  <img src="jord/10-029035010001.jpg" alt="Ada film shot">
-  <img src="jord/38-211485010005.jpg" alt="Ada film shot">
-  <img src="jord/56-024410010032.jpg" alt="Ada film shot">
-  <img src="jord/44-027945010011.jpg" alt="Ada film shot">
-  <img src="jord/6-211800010020.jpg" alt="Ada film shot">
-  <img src="jord/66-022973010005.jpg" alt="Ada film shot">
-  <img src="jord/46-211485010025.jpg" alt="Ada film shot">
-  <img src="jord/40-211485010012.jpg" alt="Ada film shot">
-  <img src="jord/21-211200010006.jpg" alt="Ada film shot">
-  <img src="jord/54-027945010029.jpg" alt="Ada film shot">
+  <header>
+    <h1>Ada on Film</h1>
+    <p class="sub">Ada caught on film. Shot on a Canon A1 with Kodak Gold.</p>
+
+    <audio id="bg-music" preload="metadata">
+      <source src="Kacey Musgraves - Slow Burn Music Video.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="controls">
+      <button id="play">▶︎ Play Music</button>
+      <button id="pause">⏸ Pause Music</button>
+    </div>
+  </header>
+
+  <main class="gal">
+    <!-- A→Z by filename (exactly as provided) -->
+    <img src="1-211800010008.jpg" alt="Ada film shot" loading="lazy">
+    <img src="2-211800010004.jpg" alt="Ada film shot" loading="lazy">
+    <img src="3-211800010015.jpg" alt="Ada film shot" loading="lazy">
+    <img src="4-211800010011.jpg" alt="Ada film shot" loading="lazy">
+    <img src="5-211800010009.jpg" alt="Ada film shot" loading="lazy">
+    <img src="6-211800010020.jpg" alt="Ada film shot" loading="lazy">
+    <img src="7-211800010019.jpg" alt="Ada film shot" loading="lazy">
+    <img src="8-027945010034.jpg" alt="Ada film shot" loading="lazy">
+    <img src="9-029035010003.jpg" alt="Ada film shot" loading="lazy">
+    <img src="10-029035010001.jpg" alt="Ada film shot" loading="lazy">
+    <img src="11-029035010013.jpg" alt="Ada film shot" loading="lazy">
+    <img src="12-029035010016.jpg" alt="Ada film shot" loading="lazy">
+    <img src="13-029035010028.jpg" alt="Ada film shot" loading="lazy">
+    <img src="14-210773010011.jpg" alt="Ada film shot" loading="lazy">
+    <img src="15-210773010015.jpg" alt="Ada film shot" loading="lazy">
+    <img src="16-210773010017.jpg" alt="Ada film shot" loading="lazy">
+    <img src="17-210773010027.jpg" alt="Ada film shot" loading="lazy">
+    <img src="18-210773010038.jpg" alt="Ada film shot" loading="lazy">
+    <img src="19-210773010037.jpg" alt="Ada film shot" loading="lazy">
+    <img src="20-211200010005.jpg" alt="Ada film shot" loading="lazy">
+    <img src="21-211200010006.jpg" alt="Ada film shot" loading="lazy">
+    <img src="22-211200010009.jpg" alt="Ada film shot" loading="lazy">
+    <img src="23-211200010014.jpg" alt="Ada film shot" loading="lazy">
+    <img src="24-211200010016.jpg" alt="Ada film shot" loading="lazy">
+    <img src="25-211200010017.jpg" alt="Ada film shot" loading="lazy">
+    <img src="26-211200010019.jpg" alt="Ada film shot" loading="lazy">
+    <img src="27-211200010018.jpg" alt="Ada film shot" loading="lazy">
+    <img src="28-211200010020.jpg" alt="Ada film shot" loading="lazy">
+    <img src="29-211200010023.jpg" alt="Ada film shot" loading="lazy">
+    <img src="30-211200010021.jpg" alt="Ada film shot" loading="lazy">
+    <img src="31-211200010030.jpg" alt="Ada film shot" loading="lazy">
+    <img src="32-211200010032.jpg" alt="Ada film shot" loading="lazy">
+    <img src="33-211200010033.jpg" alt="Ada film shot" loading="lazy">
+    <img src="34-211200010035.jpg" alt="Ada film shot" loading="lazy">
+    <img src="35-211485010002.jpg" alt="Ada film shot" loading="lazy">
+    <img src="36-211485010003.jpg" alt="Ada film shot" loading="lazy">
+    <img src="37-211485010006.jpg" alt="Ada film shot" loading="lazy">
+    <img src="38-211485010005.jpg" alt="Ada film shot" loading="lazy">
+    <img src="39-211485010011.jpg" alt="Ada film shot" loading="lazy">
+    <img src="40-211485010012.jpg" alt="Ada film shot" loading="lazy">
+    <img src="41-211485010013.jpg" alt="Ada film shot" loading="lazy">
+    <img src="42-211485010019.jpg" alt="Ada film shot" loading="lazy">
+    <img src="43-211485010023.jpg" alt="Ada film shot" loading="lazy">
+    <img src="44-027945010011.jpg" alt="Ada film shot" loading="lazy">
+    <img src="45-211485010024.jpg" alt="Ada film shot" loading="lazy">
+    <img src="46-211485010025.jpg" alt="Ada film shot" loading="lazy">
+    <img src="47-027945010023.jpg" alt="Ada film shot" loading="lazy">
+    <img src="48-211485010029.jpg" alt="Ada film shot" loading="lazy">
+    <img src="49-211485010034.jpg" alt="Ada film shot" loading="lazy">
+    <img src="50-027945010027.jpg" alt="Ada film shot" loading="lazy">
+    <img src="51-027945010015.jpg" alt="Ada film shot" loading="lazy">
+    <img src="52-027945010009.jpg" alt="Ada film shot" loading="lazy">
+    <img src="53-027945010019.jpg" alt="Ada film shot" loading="lazy">
+    <img src="54-027945010029.jpg" alt="Ada film shot" loading="lazy">
+    <img src="55-027945010003.jpg" alt="Ada film shot" loading="lazy">
+    <img src="56-024410010032.jpg" alt="Ada film shot" loading="lazy">
+    <img src="57-024410010024.jpg" alt="Ada film shot" loading="lazy">
+    <img src="58-024410010026.jpg" alt="Ada film shot" loading="lazy">
+    <img src="59-024410010010.jpg" alt="Ada film shot" loading="lazy">
+    <img src="60-024410010005.jpg" alt="Ada film shot" loading="lazy">
+    <img src="61-024410010001.jpg" alt="Ada film shot" loading="lazy">
+    <img src="62-022973010022.jpg" alt="Ada film shot" loading="lazy">
+    <img src="63-022973010021.jpg" alt="Ada film shot" loading="lazy">
+    <img src="64-022973010009.jpg" alt="Ada film shot" loading="lazy">
+    <img src="65-022973010017.jpg" alt="Ada film shot" loading="lazy">
+    <img src="66-022973010005.jpg" alt="Ada film shot" loading="lazy">
+    <img src="67-026823010035.jpg" alt="Ada film shot" loading="lazy">
+    <img src="68-026823010032.jpg" alt="Ada film shot" loading="lazy">
+    <img src="69-026823010027.jpg" alt="Ada film shot" loading="lazy">
+    <img src="70-026823010018.jpg" alt="Ada film shot" loading="lazy">
+    <img src="71-026823010016.jpg" alt="Ada film shot" loading="lazy">
+    <img src="72-026823010017.jpg" alt="Ada film shot" loading="lazy">
+    <img src="73-026823010012.jpg" alt="Ada film shot" loading="lazy">
+    <img src="74-026823010011.jpg" alt="Ada film shot" loading="lazy">
+  </main>
+
+  <footer>© 2025 Ada on Film</footer>
+
+  <script>
+    const audio = document.getElementById('bg-music');
+    document.getElementById('play').addEventListener('click', () => {
+      audio.play().catch(()=>{ /* user gesture needed on some browsers */ });
+    });
+    document.getElementById('pause').addEventListener('click', () => audio.pause());
+  </script>
 </body>
 </html>
